@@ -1,14 +1,19 @@
-pin = 1122
-tr = 0
+SIZE_N = 5
+SIZE_M = 5
 
-while tr < 3:
-    inpin = input("PIN Code? ")
-    if str(inpin) != str(pin):
-        tr += 1
-        if tr == 3:
-            print("Your card is blocked.")
+char_x = 1
+char_y = 1
+
+world_map = ''
+
+for j in range(SIZE_M):
+    row = "|"
+    for i in range(SIZE_N):
+
+        if char_x == i and char_y == j:
+            row += 'X|'
         else:
-            print(f"Try again. Remain {3-tr} tries.") 
-    else:
-        print("Welcome to system.")
-        tr = 3
+            row += ' |'
+    
+    world_map += f'{row}\n'
+print(world_map)
