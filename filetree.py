@@ -10,10 +10,12 @@ def recursive_print(path, depth=0, margin_simbol='-'):
             recursive_print(item, depth=depth+1)
     else:
         print(margin + path.name)
+    
 
 
 def main():
-    path = pathlib.Path(sys.argv[1])
+    path = pathlib.Path()
+    #print(path)
     recursive_print(path)
 
 

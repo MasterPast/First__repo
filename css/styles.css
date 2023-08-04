@@ -1,12 +1,12 @@
 /* Body */
 
 body{
-background: #f6f6fa;
-padding-left: 40px;
-padding-right: 40px;
-padding-top: 40px;
-padding-bottom: 40px;
-font-family: 'Montserrat', sans-serif;
+    background: #f6f6fa;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Wrapper */
@@ -27,16 +27,18 @@ font-family: 'Montserrat', sans-serif;
 /* Sidebar */
 
 .sidebar {
-background: #E0EBFE;
-padding-top: 40px;
-padding-bottom: 40px;
-box-sizing: border-box;
-width: 360px;
+    background: #E0EBFE;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    width: 370px;
 }
 
 /* Sidebar Content */
 .sidebar_content {
-    padding: 40px, 40px, 40px, 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
     box-sizing: border-box;
 }
 
@@ -44,13 +46,13 @@ width: 360px;
 
 .contacts_title {
 
-color: #161D2A;
-font-size: 22px;
-font-weight: 700;
-line-height: normal;
-padding-top: 40px;
-margin-top: 0px;
-margin-bottom: 8px;
+    color: #161D2A;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 40px;
+    margin-top: 0px;
+    margin-bottom: 8px;
 }
 
 .contact_type {
