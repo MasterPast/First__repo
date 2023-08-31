@@ -1,20 +1,24 @@
-import base64
 
-path = 'txt.txt'
-users_info = {'andry': 'uyro18890D', 'steve': 'oppjM13LL9e'}
+words = [1,7,4,5,5,5,2,2,3,3,7,3,4,3,3,3,2,2,1]
+grouped_words = {}
+for word in words:
+    if word not in grouped_words:
+        grouped_words[word] = 1
+    else:
+        grouped_words[word] += 1
+    min_val = grouped_words[word]
+    min_char = word    
 
-res = ''
-for key, valu in users_info.items():
-    res += (key + ':' + valu + '\n')
-res = res[: -1:]
+for word in grouped_words:
+    print(grouped_words[word])
+    if min_val > grouped_words[word]:
+        min_val = grouped_words[word]
+        min_char = word
+        print(f'min>{min_val}')
+if min_val % 2 == 0:
+    grouped_words.popitem(min_char)
+    print(grouped_words)
 
-print(res)
-message_bytes = res.encode('ascii')
-# print(message_bytes)
-base64_bytes = base64.b64encode(message_bytes)
-print(base64_bytes)
-# base64_message = base64_bytes.decode('ascii')
-# print(base64_message)
-with open(path, 'wb') as fw:
-    fw.write(base64_bytes)
-        
+print(f'min >>>{min_char}')
+
+print(grouped_words)
