@@ -21,6 +21,7 @@ if not isinstance(cats[0], dict):
         print(numb)
 else:
     for numb in cats:
+        print(678)
         dict_list.append(Cat(numb['nickname'], numb['age'], numb['owner']))
     
         print(numb)
