@@ -1,24 +1,29 @@
+import collections
 
-words = [1,7,4,5,5,5,2,2,3,3,7,3,4,3,3,3,2,2,1]
-grouped_words = {}
-for word in words:
-    if word not in grouped_words:
-        grouped_words[word] = 1
-    else:
-        grouped_words[word] += 1
-    min_val = grouped_words[word]
-    min_char = word    
+Cat = collections.namedtuple("Cat", ["nickname", "age", "owner"])
 
-for word in grouped_words:
-    print(grouped_words[word])
-    if min_val > grouped_words[word]:
-        min_val = grouped_words[word]
-        min_char = word
-        print(f'min>{min_val}')
-if min_val % 2 == 0:
-    grouped_words.popitem(min_char)
-    print(grouped_words)
+cats = [Cat(nickname='Mick', age=5, owner='Sara'), Cat(nickname='Barsik', age=7, owner='Olga'), Cat(nickname='Simon', age=3, owner='Yura')]
+# cats = [{'nickname': 'Simon', 'age': 3, 'owner': 'Yura'}, {'nickname': 'Simon', 'age': 3, 'owner': 'Yura'}, {'nickname': 'Simon', 'age': 3, 'owner': 'Yura'}]
+cats = [{'nickname': 'Simon', 'age': 3, 'owner': 'Yura'}, {'nickname': 'Simon', 'age': 3, 'owner': 'Yura'}, {'nickname': 'Simon', 'age': 3, 'owner': 'Yura'}]    
 
-print(f'min >>>{min_char}')
+dict_numb = {}
+dict_list = []
+list_res = []
+print(type(cats[0]))
+print(cats)
 
-print(grouped_words)
+if not isinstance(cats[0], dict):
+    for numb in cats:
+        dict_numb['nickname'] = numb.nickname
+        dict_numb['age'] = numb.age
+        dict_numb['owner'] = numb.owner
+        dict_list.append(dict_numb)
+        print(numb)
+else:
+    for numb in cats:
+        dict_list.append(Cat(numb['nickname'], numb['age'], numb['owner']))
+    
+        print(numb)
+
+
+print(dict_list)
