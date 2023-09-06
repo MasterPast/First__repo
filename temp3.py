@@ -1,11 +1,23 @@
-def discount_price(discount):
-    res = 100 - discount * 100
-    return res
+import re
 
-def
+def generator_numbers(string=""):
+    print(1)
+    
+    pr = re.findall('[0-9]+', string)
+    print(pr)
+    for numb in pr:
+        sum_profit(numb)
+    yield numb
+        
+        
+                    
 
-price = 100
-print(1-0.16)
-cost_10 = discount_price(0.1)
-print(discount_price(0.29))
-print(cost_10(price))
+def sum_profit(string):
+    
+    sum += int(string)
+    print(sum)
+    return sum
+        
+st = 'The resulting profit was: from the southern possessions $ 100, from the northern colonies $500, and the king gave $1000.'
+
+next(generator_numbers(st))
