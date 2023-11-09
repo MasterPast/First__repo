@@ -1,1 +1,3 @@
-YW5kcnk6dXlybzE4ODkwRApzdGV2ZTpvcHBqTTEzTEw5ZQ==
+eng,spa
+one,Uno
+two,Dos
